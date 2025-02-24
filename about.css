@@ -1,0 +1,565 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+/* Active Page Link Color */
+.navbar .nav-link.active {
+    color: #327dcd !important;  /* Change to blue for active link */
+}
+
+/* Optional: Styling for hover and active state */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #0056b3 !important;  /* Darker blue when hovered or focused */
+}
+
+
+
+/* History ////////////////////////////////////*/
+/* History Section */
+.history-section {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+
+.history-timeline {
+    position: relative;
+    max-width: 1200px; /* ADDED: Limits the width */
+    margin: auto;
+    padding-top: 50px;
+    
+}
+
+.history-items {
+    border-top: 3px solid #3489de;
+    list-style: none;
+    padding: 0;
+   
+}
+
+.history-item {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.history-item:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #1e74ca;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event-date {
+    position: absolute;
+    top: 10px; /* Moved higher to avoid overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+.history-content {
+    display: block; /* Ensures text is shown */
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+.history-content h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.history-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (min-width: 1140px) {
+    .history-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .history-item {
+        width: 23%;
+        padding-top: 45px;
+    }
+
+    .history-item:before {
+        left: auto;
+        right: auto;
+    }
+
+    .event-date {
+        top: -30px; /* Adjusted to align properly */
+    }
+}
+@media (max-width: 768px) {
+    .history-section {
+        padding: 20px;
+        background-color: #f6f6f6;
+    }
+}
+
+
+/* vission and misssion ////////////////////////////////////////////////////////////*/
+/* Mission & Vision Section */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.container-mission {
+    max-width: 1500px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #333; /* Changed for visibility */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.flex-container-mission {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex-slide-mission {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    height: 300px; /* Fixed initial height */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+/* Adjust height on hover based on content */
+.flex-slide-mission:hover {
+    height: auto;
+    padding-bottom: 20px; /* Space for extra content */
+}
+
+/* Title in the center */
+.flex-title-mission {
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+/* Content hidden initially */
+.flex-about-mission {
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    padding: 15px;
+    width: 90%;
+    margin-top: 20px;
+    background: #ffffffc6;
+    position: relative;
+    /* transition: opacity 0.5s ease, transform 0.5s ease; */
+    transform: translateY(20px);
+}
+
+/* On hover, title fades out & content appears */
+.flex-slide-mission:hover .flex-title-mission {
+    opacity: 0;
+}
+
+.flex-slide-mission:hover .flex-about-mission {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Background Images */
+.home-mission {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/vision.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-mission {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/mision.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flex-container-mission {
+        /* flex-direction: column; */
+    }
+
+    .flex-slide-mission {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* expertice //////////////////////////////////////////*/
+/* Expertise Section */
+.expertise {
+    padding: 80px 0;
+    background: #f6f6f6; /* Soft background for contrast */
+    text-align: center;
+}
+
+/* Section Title with Animation */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: auto;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100%;
+}
+
+/* Expert Content Box */
+.expert-content {
+    text-align: left;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.expert-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Expert Name & Role */
+.expert-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.expert-role {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Expert Description */
+.expert-description {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Bullet Points */
+.custom-bullets {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.custom-bullets li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+}
+
+/* Custom Bullet Styling */
+.custom-bullets li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Expert Image with Hover Effect */
+.expert-image {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.expert-image img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.expert-image:hover img {
+    transform: scale(1.05);
+}
+
+
+
+
+/* FOOTER ////////////////////////////////////////////////////////////*/
+/* Footer Styling */
+.footer {
+    background: #000; /* Black background */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Footer Columns */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    height: 80px;
+    display: block;
+    margin: 0; /* Center the logo */
+    transition: transform 0.3s ease-in-out;
+    /* filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.3));  */
+}
+
+/* Logo Hover Effect */
+.footer-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #e0e0e0;
+    max-width: 250px;
+}
+
+/* Footer Links */
+.footer-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effects */
+.footer-link:hover {
+    color:  #007bff;
+    transform: translateX(5px);
+}
+
+/* Contact Info */
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Contact Links */
+.contact-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.1s;
+}
+
+/* Hover effect */
+.contact-link:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Social Media Icons */
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Social Icons Hover */
+.social-icon:hover {
+    transform: scale(1.3);
+    color: #007bff;
+}
+
+/* Footer Divider */
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* Copyright */
+.footer .text-center p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Scroll Button Hover */
+.scroll-top:hover {
+    background: #cce5ff;
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        max-width: none;
+    }
+
+    .footer ul li {
+        font-size: 13px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+
+    .footer-logo img {
+        margin: 0 auto;
+    }
+}
+
+
+/* button  ///////////////////////////////////////////////////// */
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+    background: #0a2a4d;
+}

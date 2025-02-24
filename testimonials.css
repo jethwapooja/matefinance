@@ -1,0 +1,524 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+/* Active Page Link Color */
+.navbar .nav-link.active {
+    color: #327dcd !important;  /* Change to blue for active link */
+}
+
+/* Optional: Styling for hover and active state */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #0056b3 !important;  /* Darker blue when hovered or focused */
+}
+
+/* Testimonials Section ////////////////////////////////////////*/
+/* Testimonial Section - Clean White Theme */
+.testimonial-section {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 80px 20px;
+    background: #f6f6f6;
+    position: relative;
+}
+
+/* Section Title */
+.section-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* Elegant Underline */
+.section-title::after {
+    content: "";
+    width: 20%; /* Initially small */
+    height: 4px; /* Thinner for elegance */
+    background: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%) scaleX(1); /* Centered */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100%; /* Expands to match text width */
+}
+
+
+/* Testimonial Card - Soft & Elegant */
+.testimonial-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Testimonial Image */
+.testimonial-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover .testimonial-image {
+    transform: scale(1.1);
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+    font-size: 17px;
+    font-weight: 600;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Carousel Controls - Soft Modern Look */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 15px;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
+}
+
+.carousel-control-prev-icon:hover, 
+.carousel-control-next-icon:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Navigation Arrows */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 123, 255, 0.2);
+    transform: scale(1.1);
+}
+
+
+/* video Testimonials Section ////////////////////////////////////////*/
+/* Video Testimonial Section */
+.video-testimonial-section {
+    padding: 60px 0;
+    background-color:#f6f6f6;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Video Testimonial Container */
+.video-testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Individual Video Testimonial Card */
+.video-testimonial-card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+    /* Entrance animation */
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    animation: zoomFadeIn 1s ease-in-out forwards;
+    animation-delay: var(--delay, 0s);
+    
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease-in-out;
+}
+
+/* Different delays for staggered appearance */
+.video-testimonial-card:nth-child(1) {
+    --delay: 0s;
+}
+.video-testimonial-card:nth-child(2) {
+    --delay: 0.2s;
+}
+.video-testimonial-card:nth-child(3) {
+    --delay: 0.4s;
+}
+.video-testimonial-card:nth-child(4) {
+    --delay: 0.6s;
+}
+
+/* Hover Effect: 3D Tilt & Glow */
+.video-testimonial-card:hover {
+    transform: scale(1.05) rotateX(8deg) rotateY(8deg);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+    filter: brightness(1.1);
+    animation-play-state: paused;
+}
+
+/* Glow Effect on Hover */
+.video-testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: inherit;
+}
+
+.video-testimonial-card:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(158, 176, 195, 0.8);
+}
+
+/* Video Styling */
+.video-testimonial {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Description */
+.video-testimonial-description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Testimonial Author Name */
+.video-testimonial-author {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.video-modal .modal-video {
+    width: 100%;
+    max-width: 800px;
+    max-height: 70vh;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomFadeIn {
+    0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-testimonial-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* FOOTER ////////////////////////////////////////////////////////////*/
+/* Footer Styling */
+.footer {
+    background: #000; /* Black background */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Footer Columns */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    height: 80px;
+    display: block;
+    margin: 0; /* Center the logo */
+    transition: transform 0.3s ease-in-out;
+    /* filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.3)); */
+}
+
+/* Logo Hover Effect */
+.footer-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #e0e0e0;
+    max-width: 250px;
+}
+
+/* Footer Links */
+.footer-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effects */
+.footer-link:hover {
+    color:  #007bff;
+    transform: translateX(5px);
+}
+
+/* Contact Info */
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Contact Links */
+.contact-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.1s;
+}
+
+/* Hover effect */
+.contact-link:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Social Media Icons */
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Social Icons Hover */
+.social-icon:hover {
+    transform: scale(1.3);
+    color: #007bff;
+}
+
+/* Footer Divider */
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* Copyright */
+.footer .text-center p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Scroll Button Hover */
+.scroll-top:hover {
+    background: #cce5ff;
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        max-width: none;
+    }
+
+    .footer ul li {
+        font-size: 13px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+
+    .footer-logo img {
+        margin: 0 auto;
+    }
+}
+
+
+/* button  ///////////////////////////////////////////////////// */
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+    background: #0a2a4d;
+}
