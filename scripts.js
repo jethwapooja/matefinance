@@ -93,3 +93,49 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    function animateObjects(target) {
+        gsap.to(target, {
+            x: () => Math.random() * 50 - 25, // Random X movement
+            y: () => Math.random() * 50 - 25, // Random Y movement
+            rotation: () => Math.random() * 360, // Rotate randomly
+            duration: 3 + Math.random() * 2, // Varying animation speed
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    }
+
+    // Floating Effect
+    function floatingEffect(target) {
+        gsap.to(target, {
+            y: -10,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    }
+
+    // Rotate Pie Chart
+    function rotatePieChart(target) {
+        gsap.to(target, {
+            rotation: 360,
+            duration: 5,
+            repeat: -1,
+            ease: "linear"
+        });
+    }
+
+    // Apply animations
+    document.querySelectorAll(".animated-object").forEach(obj => {
+        animateObjects(obj);
+    });
+
+    floatingEffect(".dollar-coin");
+    floatingEffect(".bitcoin-coin");
+    floatingEffect(".rupee-coin");
+    rotatePieChart(".pie-chart");
+});
