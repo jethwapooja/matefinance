@@ -58,8 +58,7 @@ body {
 /* Contact Form & Contact Info */
 .contact-form, .contact-info {
     flex: 1;
-    background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -68,7 +67,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 100%;
 }
 
@@ -76,6 +75,11 @@ body {
 .contact-form:hover, .contact-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background: white;
 }
 
 /* Contact Heading */
@@ -130,11 +134,28 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Info */
+/* Contact Info with Background Image */
+.contact-info {
+    background: url('your-image.jpg') no-repeat center center / cover;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 50%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+/* Contact Info Text */
 .contact-info p {
     font-size: 1.1rem;
-    color: #1b1a1a;
-    margin: 5px 0;
+    color: rgb(0, 0, 0);
+    margin: 3px 0;
     display: flex;
     align-items: center;
 }
@@ -144,6 +165,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 8px;
 }
 
 /* Icons */
@@ -155,7 +177,7 @@ body {
 /* Links for Email & Phone */
 .contact-link1 {
     text-decoration: none;
-    color: #333 !important;
+    color: rgb(0, 0, 0) !important;
     transition: 0.3s ease;
 }
 
@@ -196,6 +218,7 @@ body {
         height: 300px;
     }
 }
+
 
 /* FOOTER ////////////////////////////////////////////////////////////*/
 /* Footer Styling */
